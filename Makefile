@@ -5,7 +5,7 @@ BINS = hello_world prompt
 all: ${BINS}
 
 prompt: prompt.c
-	${CC} ${CCOPTS} prompt.c -o prompt
+	${CC} ${CCOPTS} -ledit prompt.c -o prompt
 
 hello_world: hello_world.c
 	${CC} ${CCOPTS} hello_world.c -o hello_world

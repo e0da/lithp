@@ -1,31 +1,19 @@
-#define MAX_INPUT_SIZE 2048
 #include <stdio.h>
+#include <stdlib.h>
 
-char input[MAX_INPUT_SIZE];
+#include <editline/readline.h>
 
-void print_banner() {
-    puts("Lithp Version 0.0.0");
-    puts("Press Ctrl-C to exit\n");
-}
-
-void read_input() {
-    fgets(input, MAX_INPUT_SIZE, stdin);
-}
-
-void print_prompt() {
-    fputs("lithp> ", stdout);
-}
-
-void decorate_and_print_input() {
-    printf("No, you're a %s", input);
-}
+#define MAX_INPUT_SIZE 2048
 
 int main() {
-    print_banner();
+    puts("Lithp Version 0.0.0");
+    puts("Press Ctrl-C to exit\n");
+
     while (1) {
-        print_prompt();
-        read_input();
-        decorate_and_print_input();
+        char* input = readline("lithp> ");
+        add_history(input);
+        printf("No, you're a %s\n", input);
+        free(input);
     }
     return 0;
 }
