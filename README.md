@@ -7,7 +7,7 @@ Mr Daniel Holden.
 Copyright and License
 ---------------------
 
-Copyright Justin Force and licensed under the [MIT Licnese][]. Except the parts
+Copyright Justin Force and licensed under the [MIT License][]. Except the parts
 that are obviously under some other copyright or license.
 
 [Build Your Own Lisp]: http://buildyourownlisp.com
